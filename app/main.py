@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from api.forecast import forecast
+from api.forecast.forecast import forecast
 
 app = FastAPI()
 
