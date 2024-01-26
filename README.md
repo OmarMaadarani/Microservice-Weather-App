@@ -25,3 +25,4 @@ Simple Python Microservice Weather App using FastAPI
     cd app/
     uvicorn main:app --reload
     ```
+test
