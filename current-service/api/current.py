@@ -14,7 +14,7 @@ def get_current_body(resData: dict):
 
 @current.get("/", response_model=Current)
 async def currentWeather(location: str):
-	req_url = base_url + f"&q={location.title()}aqi=no"
+	req_url = base_url + f"&q={location.title()}&aqi=no"
 	res = requests.get(req_url).json()
 	
 	currentData = res["current"]
@@ -23,7 +23,7 @@ async def currentWeather(location: str):
 
 @current.get("/airqual", response_model=AirQuality)
 async def currentAirQual(location: str):
-	req_url = base_url + f"&q={location.title()}aqi=yes"
+	req_url = base_url + f"&q={location.title()}&aqi=yes"
 	res = requests.get(req_url).json()
 	
 	airQual = res["current"]["air_quality"]
