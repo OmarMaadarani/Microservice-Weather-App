@@ -17,11 +17,17 @@ Simple Python Microservice Weather App using FastAPI
         .venv\Scripts\activate
         pip install -r requirements.txt
         ```
-3. Run the Live Uvicorn Server
+3. Run the App using Docker-Compose
 
-    In the VSCode Terminal (Which should put you in the Project directory), run the following command
+    In your terminal run
 
     ```
-    cd app/
-    uvicorn main:app --reload
+    docker-compose up -d
     ```
+
+## Endpoints
+You access the each API/Microservice through the Nginx Server. Here is a Table of the OpenAPI docs links to each API for you to test the endpoints:
+| **API**         | **API URL**                                | **API Docs URL**                           |
+|-----------------|--------------------------------------------|--------------------------------------------|
+| Forecast        | http://localhost:8080/api/v1/forecast      | http://localhost:8080/api/v1/forecast/docs |
+| Current Weather | http://localhost:8080/api/v1/current       | http://localhost:8080/api/v1/current/docs  |
