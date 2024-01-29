@@ -3,7 +3,7 @@ from typing import List
 
 class Current(BaseModel):
     last_updated: str
-    temp_c: str
+    temp_c: float
     condition: dict
     feelslike_c: float
     wind_kph: float
